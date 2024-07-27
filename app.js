@@ -26,12 +26,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', (req, res) => {
-  res.send("hello world")
-});
+
 app.use('/users', usersRouter);
 app.use("/data", dataRouter);
 app.use("/stripe", stripeRouter);
+app.use('/', (req, res) => {
+  res.json({message:"Hello world"})
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
