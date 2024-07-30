@@ -31,7 +31,7 @@ app.use('/users', usersRouter);
 app.use("/data", dataRouter);
 app.use("/stripe", stripeRouter);
 app.use('/', (req, res) => {
-  res.json({message:"Hello world"})
+  res.send({message:"Hello world"})
 });
 
 // catch 404 and forward to error handler
