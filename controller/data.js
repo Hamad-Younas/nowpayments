@@ -1,4 +1,4 @@
-const { connection } = require("../stripe/database.js");
+const { connection } = require("../database.js");
 
 async function AddSub(req, res) {
     const dbdata = JSON.parse(decodeURIComponent(req.query.data));

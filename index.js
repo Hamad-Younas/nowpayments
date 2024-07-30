@@ -5,12 +5,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const cors = require("cors");
 
-require("./stripe/database.js");
+require("./database.js");
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var dataRouter = require("./routes/data.js");
-var stripeRouter = require("./stripe/stripe.js");
+var usersRouter = require('./users.js');
+var dataRouter = require("./data.js");
+var stripeRouter = require("./stripe.js");
 
 var app = express();
 app.use(cors());
