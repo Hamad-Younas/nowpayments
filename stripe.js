@@ -19,8 +19,8 @@ router.post('/payment', async (req, res) => {
       order_id: 'RGDBP-21314',
       order_description: req.body.subscriptionName,
       ipn_callback_url: 'https://nowpayments.io/',
-      success_url: `https://nowpayments.vercel.app/data/add?data=${encodeURIComponent(JSON.stringify(req.body))}`,
-      cancel_url: 'https://nowpayments.vercel.app/'
+      success_url: `http://localhost:3000/data/add?data=${encodeURIComponent(JSON.stringify(req.body))}`,
+      cancel_url: 'http://localhost:3000/'
     }
   };
   
